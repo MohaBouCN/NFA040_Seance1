@@ -1,4 +1,4 @@
- Modif------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
 INSTALLATION DE VOTRE ENVIRONNEMENT DE TRAVAIL NFA040
 ------------------------------------------------------------------------------------------------------
 Quelles sont les notions qui vont être abordées au cours de cet atelier ?
@@ -89,3 +89,21 @@ Enregistrez vos modifications via un "Commit" (le gros boutton vert) et observez
 
 Notions acquises de cette séquence :  
 Vous avez apris à modifier votre code depuis GitHUB et mis en ligne votre travail automatiquement.  
+
+---------------------------------------------------
+Exo pendant le cours
+---------------------------------------------------
+Exercice 1 (HTML) :
+Télécharger et mettre en ligne le fichier ci-dessous (via Add file dans GitHub)
+
+https://1drv.ms/u/s!AgvsSD-da1M_nMBwfJhY0rnpi8fVUA?e=ZkYypA
+
+Ce fichier sera accessible sur votre site Web via l'URL suivante : https://{URL_Alwaysdata}/1_Liste_Base.html
+
+Vidéo N°1 :  https://youtu.be/FqZ9OFcyEAo
+
+Travail demandé : Modifiez le code HTML du fichier 1_Liste_Base.html (dans GitHub) afin d'obtenir le résultat suivant :
+
+https://1drv.ms/i/s!AgvsSD-da1M_nMBx0XeZjuhFSmJMKA?e=SDY7q7
+
+Consignes : Vous ne devez toucher à la partie CSS, c'est à dire la partie <style>. Si vous respectez bien les imbrications, vous devriez avoir le bon résultat.
