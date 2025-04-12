@@ -9,8 +9,13 @@ function afficher(){
 	var resultat = "";	
 		
 	for (j=0; j<saisie ; j++){
-        for (i=0; i<(j+1) ; i++){
-                resultat += "*"; 
+        for (i=0; i<saisie ; i++){
+                /*resultat += "*"; */
+                if (i == 0 || j == 0 || j == saisie || i == saisie ) {
+                resultat += "*";
+                }
+        else {resultat += "o";}
+
         }
                 resultat += "</br>";
         }
@@ -35,5 +40,7 @@ function afficher(){
 <p>Saisir un chiffre : <input id="V1"/></p>
 <button onclick="afficher()">Afficher</button>
 <div id="result"></div>
+</body>
+</html> 
 </body>
 </html> 
