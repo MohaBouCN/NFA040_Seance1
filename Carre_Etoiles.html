@@ -11,7 +11,7 @@ function afficher(){
 	for (j=0; j<saisie ; j++){
         for (i=0; i<saisie ; i++){
                 /*resultat += "*"; */
-                if (i == 0 || j == 0 || j == saisie || i == saisie ) {
+                if (i == 0 || j == 0 || j == (saisie - 1) || i == (saisie - 1)  ) {
                 resultat += "*";
                 }
         else {resultat += "o";}
