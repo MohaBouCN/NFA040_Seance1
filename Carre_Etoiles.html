@@ -31,6 +31,20 @@ function afficher(){
 	document.getElementById('result').innerHTML = resultat;
 
 }
+function multiplication(){
+	
+	var saisie1 = parseInt(document.getElementById('V1').value);
+  	var saisie2 = parseInt(document.getElementById('V2').value);
+	var resultat = "";	
+		for(i=1 ; i<saisie2 ; i++){
+			resultat = saisie1 * i
+		}
+	
+ 
+	
+	document.getElementById('result').innerHTML = resultat;
+
+}
 
 </script>
 
