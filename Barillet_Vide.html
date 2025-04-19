@@ -4,7 +4,12 @@
 function lancer(){
           
     var Val = Math.floor((Math.random()*6+1))
-          alert("le barillet s'arrete sur la chambre " + Val);
+          if(document.getElementById("Br" +Val).style.fill =="red"){
+                alert("Perdu " );
+
+            } else {
+                alert("Gagné");
+            }
          
 }
 
