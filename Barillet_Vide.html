@@ -2,12 +2,14 @@
 <head>
 <script>
 function lancer(){
+    alert("Le barillet tourne");
           
     var Val = Math.floor((Math.random()*6+1))
           if(document.getElementById("Br" +Val).style.fill =="red"){
                 alert("Perdu " );
 
             } else {
+                document.getElementById("Br" + Val).style.fill ="blue";
                 alert("Gagné");
             }
          
@@ -16,6 +18,7 @@ function lancer(){
 function ChoixDuBarillet(id){
     
     document.getElementById("Br" +id).style.fill ="red";
+    alert("Balles placé dans le barillet");
 
     
 
