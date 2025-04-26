@@ -39,6 +39,9 @@ function deplacement(evt) {
 			break;
                 // Droite 
                 case 39:
+			ballX +=15;
+			if(ballX>885){ballX=885;}
+			document.getElementById('ball').setAttribute("cx", ballX);
 
 
 		// Haut 
