@@ -1,80 +1,93 @@
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
+<meta charset="UTF-8">
+<title>Jeu Javascript</title>
 <style>
-#zonedejeux{background-color:antiquewhite;
-			width:900px; height:400px;
-			position:absolute; top:3px; left:3px;
-			z-index:1;}
-h1{position:absolute;top:-7px; left:320px; z-index:2;}
+#zonedejeux {
+    background-color: antiquewhite;
+    width: 900px; height: 400px;
+    position: absolute; top: 3px; left: 3px;
+    z-index: 1;
+}
+h1 {
+    position: absolute;
+    top: -7px; left: 320px;
+    z-index: 2;
+}
 </style>
 
 <script>
-//var globale
+// Variables globales
 var speed = 500;
+var enemy; // important !
 
-function principale(){
-	//Ajout d'un écouteur sur les touches
-	window.addEventListener('keydown', deplacement, true);
-	//Lance la fonction bouger() à interval de "speed"
-	enemy = setInterval(bouger, speed);
-	
+function principale() {
+    // Ajout d'un écouteur sur les touches
+    window.addEventListener('keydown', deplacement, true);
+    // Lance la fonction bouger() à intervalle de "speed"
+    enemy = setInterval(bouger, speed);
 }
 
-function bouger(){
+function bouger() {
+    var ballBlue = document.getElementById('ballBlue');
+    var ballBlueX = parseInt(ballBlue.getAttribute("cx"));
 
-	//Code à créer pour faire bouger la boule enemy
-	
-		   var ballBlueX = parseInt(document.getElementById('ballBlue').getAttribute("cx"));
-		   var ballBlueY = parseInt(document.getElementById('ballBlue').getAttribute("cy"));
-		   ballBlue -=15;
-	
+    // Déplacer la boule bleue vers la gauche
+    ballBlueX -= 15;
+
+    // Si elle sort de l'écran à gauche, elle revient tout à droite
+    if (ballBlueX < 0) {
+        ballBlueX = 900;
+    }
+
+    ballBlue.setAttribute("cx", ballBlueX);
 }
-
 
 function deplacement(evt) {
-		   var ballX = parseInt(document.getElementById('ball').getAttribute("cx"));
-		   var ballY = parseInt(document.getElementById('ball').getAttribute("cy"));
-           switch (evt.keyCode) {
-                // Gauche 
-                case 37:
-				ballX -= 15;
-	                    	if(ballX<15){ballX=15;}
-				document.getElementById('ball').setAttribute("cx", ballX);
-				break;
-                // Droite 
-                case 39:
-				ballX +=15;
-				if(ballX>885){ballX=885;}
-				document.getElementById('ball').setAttribute("cx", ballX);
-				break;
+    var ball = document.getElementById('ball');
+    var ballX = parseInt(ball.getAttribute("cx"));
+    var ballY = parseInt(ball.getAttribute("cy"));
 
-		// Haut 
-                case 38:
-				ballY -=15
-				if(ballY<15){ballY=15;}
-				document.getElementById('ball').setAttribute("cy",ballY);
-				break;
+    switch (evt.keyCode) {
+        // Gauche
+        case 37:
+            ballX -= 15;
+            if (ballX < 15) { ballX = 15; }
+            ball.setAttribute("cx", ballX);
+            break;
 
-		// Bas 
-                case 40:
-				ballY +=15
-				if(ballY>385){ballY=385;}
-				document.getElementById('ball').setAttribute("cy",ballY);
-				break;
+        // Droite
+        case 39:
+            ballX += 15;
+            if (ballX > 885) { ballX = 885; }
+            ball.setAttribute("cx", ballX);
+            break;
 
-            }
+        // Haut
+        case 38:
+            ballY -= 15;
+            if (ballY < 15) { ballY = 15; }
+            ball.setAttribute("cy", ballY);
+            break;
 
+        // Bas
+        case 40:
+            ballY += 15;
+            if (ballY > 385) { ballY = 385; }
+            ball.setAttribute("cy", ballY);
+            break;
+    }
 }
-	 
 </script>
 </head>
+
 <body onload="principale()">
-	<h1>Jeux Javascript</h1>
-	<svg id="zonedejeux">
-	<circle cx="450" cy="200" r="15" fill="tomato" id="ball" />
-	<circle cx="885" cy="200" r="15" fill="blue" id="ballBlue" />
-	
-	</svg>
-<body>
+    <h1>Jeux Javascript</h1>
+    <svg id="zonedejeux">
+        <circle cx="450" cy="200" r="15" fill="tomato" id="ball" />
+        <circle cx="885" cy="200" r="15" fill="blue" id="ballBlue" />
+    </svg>
+</body>
 </html>
 
