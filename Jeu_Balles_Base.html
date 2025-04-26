@@ -33,29 +33,29 @@ function deplacement(evt) {
            switch (evt.keyCode) {
                 // Gauche 
                 case 37:
-			ballX -= 15;
-                    	if(ballX<15){ballX=15;}
-			document.getElementById('ball').setAttribute("cx", ballX);
-			break;
+				ballX -= 15;
+	                    	if(ballX<15){ballX=15;}
+				document.getElementById('ball').setAttribute("cx", ballX);
+				break;
                 // Droite 
                 case 39:
-			ballX +=15;
-			if(ballX>885){ballX=885;}
-			document.getElementById('ball').setAttribute("cx", ballX);
-			break;
+				ballX +=15;
+				if(ballX>885){ballX=885;}
+				document.getElementById('ball').setAttribute("cx", ballX);
+				break;
 
 		// Haut 
                 case 38:
-			   ballY -=15
-			   if(ballY<15){ballY=15;}
-			   document.getElementById('ball').setAttribute("cy",ballY);
-			break;
+				ballY -=15
+				if(ballY<15){ballY=15;}
+				document.getElementById('ball').setAttribute("cy",ballY);
+				break;
 
 		// Bas 
                 case 40:
-			   ballY +=15
-			   if(ballY>385){ballY=385;}
-			   document.getElementById('ball').setAttribute("cy",ballY);
+				ballY +=15
+				if(ballY>385){ballY=385;}
+				document.getElementById('ball').setAttribute("cy",ballY);
 				break;
 
             }
@@ -68,7 +68,7 @@ function deplacement(evt) {
 	<h1>Jeux Javascript</h1>
 	<svg id="zonedejeux">
 	<circle cx="450" cy="200" r="15" fill="tomato" id="ball" />
-	<circle cx="885" cy="200" r="15" fill="blue" id="ball" />
+	<circle cx="885" cy="200" r="15" fill="blue" id="ball2" />
 	
 	</svg>
 <body>
