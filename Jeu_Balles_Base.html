@@ -24,6 +24,10 @@ function bouger(){
 
 	//Code à créer pour faire bouger la boule enemy
 	
+		   var ballBlueX = parseInt(document.getElementById('ballBlue').getAttribute("cx"));
+		   var ballBlueY = parseInt(document.getElementById('ballBlue').getAttribute("cy"));
+		   ballBlue -=15;
+	
 }
 
 
@@ -68,7 +72,7 @@ function deplacement(evt) {
 	<h1>Jeux Javascript</h1>
 	<svg id="zonedejeux">
 	<circle cx="450" cy="200" r="15" fill="tomato" id="ball" />
-	<circle cx="885" cy="200" r="15" fill="blue" id="ball2" />
+	<circle cx="885" cy="200" r="15" fill="blue" id="ballBlue" />
 	
 	</svg>
 <body>
