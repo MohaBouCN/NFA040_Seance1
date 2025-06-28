@@ -19,6 +19,10 @@ body{
     background-color: aliceblue;
 }
 
+section{
+    margin-left: 5px;
+}
+
 h1{
     
     color: rgb(0, 115, 255);
