@@ -1,9 +1,11 @@
 main{
     display: flex;
-    flex-direction: row;
-    
+    flex-direction: row;    
 }
 
+body{
+    background-color: aliceblue;
+} 
 
 #gauche{
     background-color: rgb(0, 115, 255);
